@@ -2,7 +2,7 @@
 
 import re
 from django.conf import settings
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.core import validators
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
@@ -36,7 +36,7 @@ class DisposableEmailChecker(object):
         self.BDEA_TIMEOUT = getattr(settings, "BDEA_TIMEOUT", 5)
 
     def __call__(self, value):
-        value = force_text(value)
+        value = force_str(value)
 
         # Catch invalid emails before we check if they're disposable
         try:
