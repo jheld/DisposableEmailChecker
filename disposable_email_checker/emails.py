@@ -891,6 +891,7 @@ def email_domain_loader():
         "sandelf.de",
         "satka.net",
         "saynotospams.com",
+        "scarden.com",
         "scatmail.com",
         "schafmail.de",
         "schmusemail.de",
